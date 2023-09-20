@@ -6,17 +6,17 @@ class CustomNoteItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(top: 24,bottom: 24),
+    return  Container(
+      padding: const EdgeInsets.only(top: 24,bottom: 24,),
       decoration: BoxDecoration(
-        color: Color(0xffFCCA7D),
+        color:const  Color(0xffFCCA7D),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
-            title: Text(
+            title:const Text(
               'Flutter tips',
               style: TextStyle(
                 color: Colors.black,
@@ -32,7 +32,7 @@ class CustomNoteItem extends StatelessWidget {
                 
               ),
             ),
-            trailing: IconButton( onPressed: (){} ,icon: Icon(FontAwesomeIcons.trash, color: Colors.black,)),
+            trailing: IconButton( onPressed: (){} ,icon:const Icon(FontAwesomeIcons.trash, color: Colors.black,)),
           ),
           Padding(
             padding: const EdgeInsets.only(right:24.0 , top: 24,),

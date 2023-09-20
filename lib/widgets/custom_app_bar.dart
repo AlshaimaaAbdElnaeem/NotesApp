@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/views/widgets/custom_search_icon.dart';
+import 'package:note_app/widgets/custom_search_icon.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -7,8 +7,8 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 40),
-      child: Row(
+      padding:  EdgeInsets.only(top:40.0),
+      child:  Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
              Text(
