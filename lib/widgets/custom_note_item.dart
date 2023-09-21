@@ -6,37 +6,55 @@ class CustomNoteItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      padding: const EdgeInsets.only(top: 24,bottom: 24,),
+    return Container(
+      padding: const EdgeInsets.only(
+        top: 24,
+        bottom: 24,
+      ),
       decoration: BoxDecoration(
-        color:const  Color(0xffFCCA7D),
+        color: const Color(0xffFCCA7D),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
-            title:const Text(
+            title: const Text(
               'Flutter tips',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 30,
               ),
             ),
-            
             subtitle: Padding(
               padding: const EdgeInsets.only(top: 24),
               child: Text(
-                'Build your Career with Tharwat Samy',
-                style: TextStyle(color: Colors.black.withOpacity(0.4),fontSize: 20),
-                
+                ' Build your career with Tharwat Samy ',
+                style: TextStyle(
+                  color: Colors.black.withOpacity(0.4),
+                  fontSize: 20,
+                ),
               ),
             ),
-            trailing: IconButton( onPressed: (){} ,icon:const Icon(FontAwesomeIcons.trash, color: Colors.black,)),
+            trailing: IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  FontAwesomeIcons.trash,
+                  color: Colors.black,
+                )),
           ),
           Padding(
-            padding: const EdgeInsets.only(right:24.0 , top: 24,),
-            child: Text('May 21,2022' , style: TextStyle(color:Colors.black.withOpacity(0.4), fontSize: 14, ),),
+            padding: const EdgeInsets.only(
+              right: 24.0,
+              top: 24,
+            ),
+            child: Text(
+              'May 21,2022',
+              style: TextStyle(
+                color: Colors.black.withOpacity(0.4),
+                fontSize: 14,
+              ),
+            ),
           ),
         ],
       ),
