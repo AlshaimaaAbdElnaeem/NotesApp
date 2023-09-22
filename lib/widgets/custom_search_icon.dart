@@ -8,15 +8,15 @@ class CustomSearchIcon extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 8.0),
       child: Container(
-        width: 45,
-        height: 45,
+        width: 48,
+        height: 48,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(14),
           color: Colors.white.withOpacity(0.05),
         ),
         child: IconButton(
           onPressed: () {},
-          icon:  Icon(icon, size: 30),
+          icon:  Icon(icon, size: 28),
         ),
       ),
     );
