@@ -3,16 +3,24 @@ import 'package:note_app/widgets/constance.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
-      {super.key, required this.textHint, this.numberOfLines = 1});
+      {super.key, required this.textHint, this.numberOfLines = 1,this.onSaved});
   final String textHint;
   final int numberOfLines;
+final Function(String?) ? onSaved;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
         top: 16,
       ),
-      child: TextField(
+      child: TextFormField(
+        onSaved: onSaved,
+        validator: (value) {
+          if (value?.isEmpty ?? true){
+            return 'field is required !';
+          }
+        },
+        cursorColor:kPrimaryColor,
         maxLines: numberOfLines,
         decoration: InputDecoration(
           hintText: textHint,
