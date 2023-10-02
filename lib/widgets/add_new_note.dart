@@ -39,7 +39,7 @@ class _AddNewNoteState extends State<AddNewNote> {
             },
           ),
           const SizedBox(
-            height: 100,
+            height: 75,
           ),
           AddBottom(onTap: () {
             if (formKey.currentState!.validate()) {
