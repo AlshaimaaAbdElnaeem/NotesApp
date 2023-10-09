@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:note_app/models/note_model.dart';
 import 'package:note_app/views/edit_note_view.dart';
+import 'package:note_app/widgets/constance.dart';
+import 'package:note_app/widgets/message_deletting.dart';
 
 class CustomNoteItem extends StatelessWidget {
   const CustomNoteItem({super.key, required this.note});
-final NoteModel note ;
+  final NoteModel note;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -20,14 +22,14 @@ final NoteModel note ;
           bottom: 24,
         ),
         decoration: BoxDecoration(
-          color:  Color(note.color),
+          color: Color(note.color),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              title:  Text(
+              title: Text(
                 note.title,
                 style: const TextStyle(
                   color: Colors.black,
@@ -45,7 +47,10 @@ final NoteModel note ;
                 ),
               ),
               trailing: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // set up the button
+                    messageDeletting(context,note );
+                  },
                   icon: const Icon(
                     FontAwesomeIcons.trash,
                     color: Colors.black,
@@ -57,7 +62,7 @@ final NoteModel note ;
                 top: 24,
               ),
               child: Text(
-              note.date,
+                note.date,
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.4),
                   fontSize: 14,
@@ -69,4 +74,6 @@ final NoteModel note ;
       ),
     );
   }
+
+ 
 }
