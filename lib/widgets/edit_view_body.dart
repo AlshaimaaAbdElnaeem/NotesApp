@@ -4,6 +4,7 @@ import 'package:note_app/cubit/notes_cubit/notes_cubit.dart';
 import 'package:note_app/models/note_model.dart';
 import 'package:note_app/widgets/custom_app_bar.dart';
 import 'package:note_app/widgets/custom_text_field.dart';
+import 'package:sizer/sizer.dart';
 
 class EditViewBody extends StatefulWidget {
   const EditViewBody({super.key, required this.note});
@@ -31,8 +32,8 @@ class _EditViewBodyState extends State<EditViewBody> {
             Navigator.pop(context);
           },
         ),
-        const SizedBox(
-          height: 16,
+         SizedBox(
+          height: 16.sp,
         ),
         CustomTextField(
           textHint: widget.note.title,

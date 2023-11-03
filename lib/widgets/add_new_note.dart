@@ -4,7 +4,9 @@ import 'package:intl/intl.dart';
 import 'package:note_app/cubit/add_note_cubit/add_note_cubit.dart';
 import 'package:note_app/models/note_model.dart';
 import 'package:note_app/widgets/add_bottom.dart';
+import 'package:note_app/widgets/color_list.dart';
 import 'package:note_app/widgets/custom_text_field.dart';
+import 'package:sizer/sizer.dart';
 
 class AddNewNote extends StatefulWidget {
   const AddNewNote({
@@ -34,14 +36,15 @@ class _AddNewNoteState extends State<AddNewNote> {
           ),
           CustomTextField(
             textHint: 'Content',
-            numberOfLines: 7,
+            numberOfLines: 7, 
             onSaved: (value) {
               subTitle = value;
             },
           ),
-          const SizedBox(
-            height: 75,
+           SizedBox(
+            height: 15.sp,
           ),
+              const ColorList(),
           AddBottom(onTap: () {
             if (formKey.currentState!.validate()) {
               var currentDate = DateTime.now();
@@ -63,3 +66,4 @@ class _AddNewNoteState extends State<AddNewNote> {
     );
   }
 }
+
