@@ -53,7 +53,7 @@ class _AddNewNoteState extends State<AddNewNote> {
               var note = NoteModel(
                 title: title!,
                 content: subTitle!,
-                color: Colors.blue.value,
+                color: BlocProvider.of<AddNoteCubit>(context).color.value,
                 date:formattedCurrentDate,
               );
               BlocProvider.of<AddNoteCubit>(context).addNote(note);
